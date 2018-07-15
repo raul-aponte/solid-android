@@ -6,8 +6,8 @@ import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.fungisoft.solidprinciples.R;
-import com.fungisoft.solidprinciples.util.models.Constants;
-import com.fungisoft.solidprinciples.util.models.DogService;
+import com.fungisoft.solidprinciples.util.Constants;
+import com.fungisoft.solidprinciples.util.DogService;
 import com.fungisoft.solidprinciples.util.models.PictureMessage;
 import com.squareup.picasso.Picasso;
 

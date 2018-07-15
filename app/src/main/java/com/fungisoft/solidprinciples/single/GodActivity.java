@@ -6,10 +6,8 @@ import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.fungisoft.solidprinciples.R;
-import com.fungisoft.solidprinciples.util.models.DogClient;
+import com.fungisoft.solidprinciples.util.DogClient;
 import com.squareup.picasso.Picasso;
-
-import org.jetbrains.annotations.NotNull;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

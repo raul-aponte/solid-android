@@ -2,8 +2,8 @@ package com.fungisoft.solidprinciples.single;
 
 import android.app.Activity;
 
-import com.fungisoft.solidprinciples.util.models.Constants;
-import com.fungisoft.solidprinciples.util.models.DogService;
+import com.fungisoft.solidprinciples.util.Constants;
+import com.fungisoft.solidprinciples.util.DogService;
 import com.fungisoft.solidprinciples.util.models.PictureMessage;
 
 import retrofit2.Call;

@@ -1,5 +1,6 @@
-package com.fungisoft.solidprinciples.util.models
+package com.fungisoft.solidprinciples.util
 
+import com.fungisoft.solidprinciples.util.models.PictureMessage
 import retrofit2.Call
 import retrofit2.http.GET
 
