@@ -7,14 +7,14 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class DogClient {
+class DogClient: DogProvider {
     private val retrofit: Retrofit by lazy {
         Retrofit.Builder()
                 .baseUrl(Constants.API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }
-    fun fetchRandom(listener: PictureImageListener) {
+    override fun fetchRandom(listener: PictureImageListener) {
         val service = retrofit.create(DogService::class.java)
         service.randomImage().enqueue(object : Callback<PictureMessage> {
             override fun onResponse(call: Call<PictureMessage>, response: Response<PictureMessage>) {
@@ -25,9 +25,5 @@ class DogClient {
 
             }
         })
-    }
-
-    interface PictureImageListener {
-        fun onImageReceived(imageUrl: String?)
     }
 }

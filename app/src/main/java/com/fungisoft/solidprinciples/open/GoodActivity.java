@@ -8,7 +8,7 @@ import com.fungisoft.solidprinciples.util.models.Pet;
 
 // Software entities (classes, modules, functions, etc.) should be open for extension,
 // but closed for modification
-public class GodActivity extends BaseActivity {
+public class GoodActivity extends BaseActivity {
     private PetProvider petProvider;
 
     @Override
@@ -19,7 +19,7 @@ public class GodActivity extends BaseActivity {
     }
 
     private void showPet(Pet pet) {
-        GodPetView view = getCurrentView();
+        GoodPetView view = getCurrentView();
         view.showPet(pet);
     }
 }

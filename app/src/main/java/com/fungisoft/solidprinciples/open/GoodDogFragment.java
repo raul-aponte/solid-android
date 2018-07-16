@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 
 import com.fungisoft.solidprinciples.util.models.Pet;
 
-public class GodCatFragment extends Fragment implements GodPetView {
+public class GoodDogFragment extends Fragment implements GoodPetView {
     @Override
     public void showPet(Pet pet) {
 

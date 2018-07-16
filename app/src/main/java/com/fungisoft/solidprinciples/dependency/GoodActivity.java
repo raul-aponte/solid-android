@@ -1,4 +1,4 @@
-package com.fungisoft.solidprinciples.single;
+package com.fungisoft.solidprinciples.dependency;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,26 +7,30 @@ import android.widget.ImageView;
 
 import com.fungisoft.solidprinciples.R;
 import com.fungisoft.solidprinciples.util.DogClient;
+import com.fungisoft.solidprinciples.util.DogProvider;
+import com.fungisoft.solidprinciples.util.PictureImageListener;
 import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-// "A class should have only one reason to change."
-public class GodActivity extends Activity {
-    private DogClient dogClient;
+// A. High-level modules should not depend on low-level modules. Both should depend on abstractions.
+// B. Abstractions should not depend on details. Details should depend on abstractions.
+public class GoodActivity extends Activity {
+    private DogProvider dogProvider;
     @BindView(R.id.image_view_dog) ImageView imageViewDog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_god);
+        setContentView(R.layout.activity_bad);
         ButterKnife.bind(this);
 
-        dogClient = new DogClient();
-        dogClient.fetchRandom(new DogClient.PictureImageListener() {
+        dogProvider = new DogClient();
+        //dogProvider = new FileDogProvider();
+        dogProvider.fetchRandom(new PictureImageListener() {
             @Override
-            public void onImageReceived(String imageUrl) {
+            public void onImageReceived(@Nullable String imageUrl) {
                 showImage(imageUrl);
             }
         });

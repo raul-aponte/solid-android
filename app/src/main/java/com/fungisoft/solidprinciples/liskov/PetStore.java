@@ -16,7 +16,7 @@ public class PetStore {
 
     public PetStore() {
         petProvider = new BadCatProvider();
-        //petProvider = new GodCatProvider();
+        //petProvider = new GoodCatProvider();
     }
 
     public void getPet(String newName) {
@@ -38,6 +38,6 @@ public class PetStore {
     }
 
     public void addPet(Pet newPet) {
-        pets.add(newPet); // God LSP :)
+        pets.add(newPet); // Good LSP :)
     }
 }

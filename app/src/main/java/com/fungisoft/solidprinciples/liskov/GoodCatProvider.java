@@ -6,7 +6,7 @@ import com.fungisoft.solidprinciples.util.models.Pet;
 
 import org.jetbrains.annotations.NotNull;
 
-public class GodCatProvider implements PetProvider {
+public class GoodCatProvider implements PetProvider {
     @NotNull
     @Override
     public Pet getPet() {

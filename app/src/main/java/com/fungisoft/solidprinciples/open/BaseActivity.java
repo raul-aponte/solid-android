@@ -19,9 +19,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         return getSupportFragmentManager().findFragmentById(R.id.main_content);
     }
 
-    protected GodPetView getCurrentView() {
-        if (getCurrentFragment() instanceof GodPetView) {
-            return (GodPetView) getCurrentFragment();
+    protected GoodPetView getCurrentView() {
+        if (getCurrentFragment() instanceof GoodPetView) {
+            return (GoodPetView) getCurrentFragment();
         }
         return null;
     }
